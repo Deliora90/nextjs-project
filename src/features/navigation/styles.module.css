@@ -1,0 +1,5 @@
+.navigation {
+  @apply flex items-center gap-3;
+}
+
+.navigation__item {}

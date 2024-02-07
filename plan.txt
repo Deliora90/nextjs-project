@@ -1,0 +1,40 @@
+Pages
+
+HomePage - главная страница
+  посмотреть авиабилеты
+  посмотреть отели
+  поиск билетов
+  поиск отелей
+
+TicketResultPage - страница с результатами поиска билетов
+  посмотреть список билетов
+  задавать фильтрацию
+
+
+Widgets
+Header
+TicketsList - список билетов с пагинацией и фильтрацией
+HotelsList - список отелей с пагинацией и фильтрацией
+
+
+Features
+
+TickerSearchForm - форма для поиска билетов
+HotelsSearchForm - форма для поиска отелей
+TickerFilters - Фильтрация билетов
+HotelsFilters - Фильтрация отелей
+
+
+Entities
+
+TicketCard - карточка билетов
+HoltelCard - карточка отеля
+
+
+Shared
+
+Card - компонент карточки
+Select
+DataPicker
+Button
+Tabs

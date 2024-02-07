@@ -1,0 +1,21 @@
+.home {
+  @apply flex min-h-screen flex-col z-10;
+}
+
+.home__bg {
+  @apply relative;
+}
+
+.home__title {
+  @apply py-36 z-10 flex flex-col justify-center items-center gap-7;
+}
+
+.searching {
+  @apply z-10;
+}
+
+/* @media (min-width: theme(screens.lg)) {
+  .background_wrapper {
+    @apply h-[600px];
+  }
+} */

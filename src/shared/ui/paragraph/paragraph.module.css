@@ -1,0 +1,12 @@
+.paragraph__h1 {
+  @apply text-white font-bold text-9xl uppercase text-center;
+}
+
+.paragraph__h2 {
+  @apply text-white text-5xl text-center;
+
+}
+
+.paragraph__p {
+  @apply text-white text-2xl text-center;
+}

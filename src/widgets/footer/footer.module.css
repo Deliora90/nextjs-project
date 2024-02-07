@@ -1,0 +1,4 @@
+.footer {
+  @apply bg-lime-500;
+  grid-area: footer;
+}

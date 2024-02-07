@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-color: #112211;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --font-color: #FFFFFF;
+  }
+}
+
+body {
+  color: rgb(var(--font-color));
+  font-family: var(--var-roboto), "latin";
+}

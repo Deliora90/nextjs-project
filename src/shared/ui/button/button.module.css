@@ -1,0 +1,23 @@
+.button {
+  @apply py-3 px-5 text-gray-900 font-light rounded;
+}
+
+.button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.button_primary {
+  @apply bg-green-500 shadow;
+}
+
+.button_primary:hover {
+  @apply bg-green-400;
+}
+
+.button_secondary {
+  @apply bg-transparent;
+}
+
+.button_secondary:hover {
+  @apply bg-green-100;
+}
