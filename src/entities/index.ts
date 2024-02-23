@@ -1,2 +1,1 @@
-export { Background } from "./background";
-export type { BackgroundProps } from "./background";
+export * from "./schema";

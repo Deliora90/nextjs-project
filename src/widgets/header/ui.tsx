@@ -13,7 +13,7 @@ export const Header = () => {
       </div>
       <div className={s.header__logo}>
         <Link href="/">
-          <Image src="/logo.png" priority alt="" width={110} height={36} />
+          <Image src="/logo.svg" priority alt="Logo" width={100} height={100} />
         </Link>
       </div>
       <div className={s.header__auth}>

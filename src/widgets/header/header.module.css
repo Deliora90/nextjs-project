@@ -1,7 +1,7 @@
 .header {
   grid-area: header;
 
-  @apply fixed top-0 w-full p-5 flex items-center z-10;
+  @apply sticky bg-green-300 top-0 w-full p-5 flex items-center z-10;
 }
 
 .header__nav {
@@ -13,5 +13,5 @@
 }
 
 .header__auth {
-  @apply flex-1;
+  @apply flex flex-1 justify-end;
 }

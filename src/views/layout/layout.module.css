@@ -1,7 +1,5 @@
 .layout {
-  @apply relative py-0 px-52 bg-[#FAFBFC] text-green-900;
-  display: grid;
-  grid-template-rows: 1fr auto 6fr;
+  @apply relative grid bg-[#FAFBFC] text-green-900;
   grid-template-areas:
     "header"
     "content"

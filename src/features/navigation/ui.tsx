@@ -8,10 +8,10 @@ export const Navigation = () => {
     <nav>
       <ul className={s.navigation}>
         <li className={s.navigation__item}>
-          <Link href="/">Find Flight</Link>
+          <Link href="/">Link 1</Link>
         </li>
         <li className={s.navigation__item}>
-          <Link href="/">Find Stays</Link>
+          <Link href="/">Link 2</Link>
         </li>
       </ul>
     </nav>

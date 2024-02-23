@@ -6,31 +6,34 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "fake-server": "npx json-server -p 5000 --watch server/db.json --routes server/routes.json"
   },
   "dependencies": {
-    "@faker-js/faker": "^8.2.0",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "clsx": "^2.1.0",
     "dayjs": "^1.11.10",
-    "formik": "^2.4.5",
-    "konva": "^9.3.2",
     "mobx": "^6.11.0",
     "mobx-react-lite": "^4.0.5",
     "next": "^14.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-konva": "^18.2.10",
-    "react-tailwindcss-datepicker": "^1.6.6"
+    "react-query": "^3.39.3",
+    "react-tailwindcss-datepicker": "^1.6.6",
+    "uuid": "^9.0.1",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@types/json-server": "^0.14.7",
     "@types/node": "^20",
     "@types/react": "^18.2.36",
     "@types/react-dom": "^18.2.14",
+    "@types/uuid": "^9.0.8",
     "autoprefixer": "^10",
     "eslint": "^8",
     "eslint-config-next": "^14.0.1",
+    "json-server": "^0.17.4",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"

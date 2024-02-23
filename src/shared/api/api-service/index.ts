@@ -1,7 +1,24 @@
-import { ErrorResponse, Options, Service } from "@/shared/api/types";
+import { ErrorResponse, Options, Service } from "@/shared";
 
-const headers: HeadersInit = {
+const defaultHeaders: HeadersInit = {
   "Content-Type": "application/json;charset=utf-8",
+};
+
+const getBody = <T>(data?: T) => (data ? JSON.stringify(data) : undefined);
+
+const successHandler = <T>(response: Response): Promise<T> => {
+  if (!response.ok) {
+    throw response;
+  }
+  return response.json();
+};
+
+//TODO: Тут нужно обработать ошибку
+const errorHandler = (error: unknown) => {
+  throw {
+    code: 400,
+    message: "Request error",
+  };
 };
 
 export class ApiService implements Service {
@@ -16,67 +33,47 @@ export class ApiService implements Service {
     return `${this.baseUrl}${url}?${urlParams}`;
   };
 
-  async get<T>(url: string, init?: Options) {
+  async get<T, U>(url: string, init?: Options<U>) {
     return await fetch(this.getUrl(url, init?.params), {
       method: "GET",
-      headers,
+      headers: init?.headers ?? defaultHeaders,
       ...init,
+      body: undefined,
     })
-      .then((response): Promise<T> => response.json())
-      .catch(
-        (error): Promise<ErrorResponse> =>
-          Promise.reject({
-            code: 400,
-            message: error.message ?? "Request error",
-          })
-      );
+      .then(successHandler<T>)
+      .catch(errorHandler);
   }
 
-  async post<T>(url: string, init?: Options) {
+  async post<T, U>(url: string, init?: Options<U>) {
     return await fetch(this.getUrl(url, init?.params), {
       method: "POST",
-      headers,
+      headers: init?.headers ?? defaultHeaders,
       ...init,
+      body: getBody(init?.body),
     })
-      .then((response): Promise<T> => response.json())
-      .catch(
-        (error): Promise<ErrorResponse> =>
-          Promise.reject({
-            code: 400,
-            message: error.message ?? "Request error",
-          })
-      );
+      .then(successHandler<T>)
+      .catch(errorHandler);
   }
 
-  async put<T>(url: string, init?: Options) {
+  async put<T, U>(url: string, init?: Options<U>) {
     return await fetch(this.getUrl(url, init?.params), {
       method: "PUT",
-      headers,
+      headers: init?.headers ?? defaultHeaders,
       ...init,
+      body: getBody(init?.body),
     })
-      .then((response): Promise<T> => response.json())
-      .catch(
-        (error): Promise<ErrorResponse> =>
-          Promise.reject({
-            code: 400,
-            message: error.message ?? "Request error",
-          })
-      );
+      .then(successHandler<T>)
+      .catch(errorHandler);
   }
 
-  async delete<T>(url: string, init?: Options) {
+  async delete<T, U>(url: string, init?: Options<U>) {
     return await fetch(this.getUrl(url, init?.params), {
       method: "DELETE",
-      headers,
+      headers: init?.headers ?? defaultHeaders,
       ...init,
+      body: getBody(init?.body),
     })
-      .then((response): Promise<T> => response.json())
-      .catch(
-        (error): Promise<ErrorResponse> =>
-          Promise.reject({
-            code: 400,
-            message: error.message ?? "Request error",
-          })
-      );
+      .then(successHandler<T>)
+      .catch(errorHandler);
   }
 }

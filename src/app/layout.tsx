@@ -4,18 +4,18 @@ import { Layout } from "@/views";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Golobe",
-  description: "Search flights & places hire to our most popular destinations",
-  keywords: ["flights", "places", "tickets"],
+  title: "Sweet knitting",
+  icons: ["./logo.svg"],
+  description: "Sweet knitting",
+  keywords: ["knitting"],
   openGraph: {
     type: "website",
     url: "https://example.com",
-    title: "Golobe",
-    description:
-      "Search flights & places hire to our most popular destinations",
-    siteName: "Golobe",
+    title: "Sweet knitting",
+    description: "Sweet knitting",
+    siteName: "Sweet knitting",
     images: "/og_image.png",
-  }
+  },
 };
 
 export const viewport: Viewport = {

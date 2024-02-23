@@ -1,7 +1,0 @@
-.background {
-  @apply absolute h-[600px] rounded overflow-hidden top-0 w-full z-0;
-}
-
-.background__mask {
-  @apply absolute z-0 w-full h-full bg-gradient-to-b from-[#00000099];
-}
